@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 import time
 import unittest
 
-
 class LumaTest(unittest.TestCase):
 
     count = 0
@@ -104,9 +103,9 @@ class LumaTest(unittest.TestCase):
         element.click()
         time.sleep(3)
 
-        if(self.driver.find_element(By.ID, 'customer-email')):
-           element = self.driver.find_element(By.ID, 'customer-email')
-           element.send_keys('test@mail.co')
+        if (self.driver.find_element(By.ID, 'customer-email')):
+            element = self.driver.find_element(By.ID, 'customer-email')
+            element.send_keys('test@mail.co')
 
         element = self.driver.find_element(By.NAME, 'firstname')
         element.send_keys('Carlos')
@@ -138,7 +137,8 @@ class LumaTest(unittest.TestCase):
         element = self.driver.find_element(By.NAME, 'telephone')
         element.send_keys('32589846')
 
-        element = self.driver.find_element(By.CSS_SELECTOR, 'tbody .col:nth-child(1)')
+        element = self.driver.find_element(
+            By.CSS_SELECTOR, 'tbody .col:nth-child(1)')
         element.click()
         element.submit()
 
